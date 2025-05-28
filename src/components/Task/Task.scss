@@ -1,0 +1,101 @@
+.task-item {
+  background-color: #fff;
+  font-size: 16px;
+
+  &.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+    background-color: #e6fce6;
+    border-left: 5px solid #66bb6a;
+  }
+
+  &.overdue {
+    background-color: rgba(255, 0, 0, 0.08);
+
+    td {
+      border-left: 4px solid #e74c3c;
+    }
+  }
+
+  td {
+    padding: 10px;
+    vertical-align: middle;
+  }
+
+  input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+
+  .priority {
+    &.low {
+      color: green;
+    }
+    &.medium {
+      color: orange;
+    }
+    &.high {
+      color: red;
+    }
+  }
+
+  .deadline {
+    font-style: italic;
+  }
+
+  .created-date {
+    opacity: 0.7;
+    font-size: 14px;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    button {
+      background-color: transparent;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #e74c3c;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &.edit-mode {
+    td {
+      padding: 8px 10px;
+
+      input[type="text"],
+      select,
+      input[type="date"] {
+        padding: 6px 8px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%;
+      }
+
+      .created-date {
+        font-size: 13px;
+        color: #777;
+        white-space: nowrap;
+      }
+
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
